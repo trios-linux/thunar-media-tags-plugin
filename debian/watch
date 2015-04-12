@@ -1,0 +1,3 @@
+version=3
+http://archive.xfce.org/src/thunar-plugins/thunar-media-tags-plugin/([\d\.]+)/ \
+	thunar-media-tags-plugin-([\d\.]+)\.tar\.(?:gz|bz2)

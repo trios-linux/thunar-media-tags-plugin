@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+export DEB_LDFLAGS_MAINT_APPEND=-Wl,--as-needed -Wl,-O1 -Wl,-z,defs
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+
+%:
+	dh $@
+
+override_dh_install:
+	rm -f $(CURDIR)/debian/thunar-media-tags-plugin/usr/lib/$(DEB_HOST_MULTIARCH)/thunarx-2/*.la
+	dh_install --fail-missing
+
+override_dh_makeshlibs:
+	dh_makeshlibs -n -X /usr/lib/$(DEB_HOST_MULTIARCH)/thunarx-2

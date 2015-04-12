@@ -1,0 +1,16 @@
+Source: thunar-media-tags-plugin
+Section: xfce
+Priority: optional
+Maintainer: Filip Danilovic <filip@openmailbox.org>
+Build-Depends: debhelper (>= 9), pkg-config, libthunarx-2-dev, libexo-1-dev,
+ libtagc0-dev, libxml-parser-perl, intltool
+Standards-Version: 3.9.6
+Vcs-Svn: svn://svn.debian.org/pkg-xfce/goodies/trunk/thunar-media-tags-plugin/
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-xfce/goodies/trunk/thunar-media-tags-plugin/
+
+Package: thunar-media-tags-plugin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, thunar (>= 1.1.0)
+Description: Media tags plugin for Thunar file manager
+ This plugin allows tags editing from Thunar file manager  and tags-based file
+ renaming from inside Thunar Bulk Renamer

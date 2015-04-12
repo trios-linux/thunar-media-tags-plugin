@@ -1,0 +1,125 @@
+thunar-media-tags-plugin (0.2.1-1+trios1) mia; urgency=medium
+
+  * Rebuild against xfce 4.12 for TRIOS.
+  * Bump standards to 3.9.6
+
+ -- Filip Danilovic <filip@openmailbox.org>  Sun, 12 Apr 2015 23:10:40 +0200
+
+thunar-media-tags-plugin (0.2.1-1) unstable; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * New upstream release.
+  * debian/control: bump debhelper b-dep to (>= 9).
+  * debian/rules: enable all hardening options.
+
+  [ Yves-Alexis Perez ]
+  * debian/control:
+    - update standards version to 3.9.4.
+    - drop version on Xfce build-dep since stable has Xfce 4.8 now.
+    - drop dpkg-dev build-dep since stable one has hardening support.
+
+ -- Lionel Le Folgoc <mrpouit@gmail.com>  Sun, 26 May 2013 14:54:16 +0200
+
+thunar-media-tags-plugin (0.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches:
+    - 01_port-to-thunarx-2 and 02_port-to-exo-1,
+      03_fix-crash-with-ogg-video-files and 04_fix-implicit-dso-linkin
+      dropped, included upstream.
+  * debian/rules:
+    - drop xdt-autogen rules, not needed anymore.
+    - use dh9 and dpkg-dev 1.16.1 hardening rules.
+    - switch to multiarch paths.
+  * debian/compat bumped to 9 for hardening support.
+  * debian/control:
+    - update debhelper build-dep for hardening support
+    - add dpkg-dev build-dep for hardening support
+    - drop build-deps for autoreconf.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 30 Nov 2011 22:20:30 +0100
+
+thunar-media-tags-plugin (0.1.2-3) unstable; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * debian/control:
+    - add myself to Uploaders.
+    - refresh b-deps for Xfce 4.8: replace libexo-0.3-dev with libexo-1-dev,
+      and libthunar-vfs-1-dev with libthunarx-2-dev; drop cdbs and
+      autotools-dev; add intltool, hardening-includes, xfce4-dev-tools,
+      automake, autoconf and libtool (needed for xdt-autogen).
+    - bump thunar dep to a realistic version >= 1.1.0.
+  * debian/patches:
+    - 01_port-to-thunarx-2.patch, 02_port-to-exo-1.patch: added, port to
+      Xfce 4.8.
+    - 03_fix-crash-with-ogg-video-files.patch: added, prevents a crash with
+      weird ogg video files considered as audio ones.
+    - 04_fix-implicit-dso-linking.patch: added, fixes FTBFS with binutils-gold.
+    - series: added.
+  * Switch to 3.0 (quilt).
+  * debian/rules:
+    - switch to dh.
+    - call dpkg-buildflags, and include hardening flags.
+    - run xdt-autogen to refresh autotools' files, and remove changed ones
+      after the build.
+    - add .pc files to POTFILES.skip.
+
+  [ Yves-Alexis Perez ]
+  * debian/control:
+    - remove Emanuele, Simon, Rudy and Martin from uploaders.
+    - bump debhelper build-dep for overrides.
+    - update standards version to 3.9.2. 
+
+ -- Lionel Le Folgoc <mrpouit@gmail.com>  Wed, 20 Apr 2011 13:16:18 +0200
+
+thunar-media-tags-plugin (0.1.2-2) unstable; urgency=low
+
+  [ Simon Huggins ]
+  * Add Vcs-* headers to debian/control
+
+  [ Evgeni Golov ]
+  * Fix Vcs-* fields, they were missing 'trunk' in the path.
+
+  [ Yves-Alexis Perez ]
+  * debian/watch edited to track Xfce archive reorganisation
+  * debian/control:
+    - add myself to Uploaders.
+    - update standards version to 3.8.3.
+    - update debhelper build-dep to 7.
+    - switch to xfce section.
+  * debian/compat bumped to 7.
+  * debian/copyright adjusted.
+  * debian/rules:
+    - ignore plugin in dh_makeshlibs.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 11 Nov 2009 15:45:38 +0100
+
+thunar-media-tags-plugin (0.1.2-1) unstable; urgency=low
+
+  * New upstream release. 
+
+ -- Yves-Alexis Perez <corsac@corsac.net>  Fri, 25 May 2007 10:51:22 +0100
+
+thunar-media-tags-plugin (0.1.1-2) unstable; urgency=low
+
+  * debian/rules: remove correctly .la file.
+
+ -- Yves-Alexis Perez <corsac@corsac.net>  Thu, 16 Nov 2006 18:16:32 +0100
+
+thunar-media-tags-plugin (0.1.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Yves-Alexis Perez <corsac@corsac.net>  Sat, 23 Sep 2006 15:37:52 +0100
+
+thunar-media-tags-plugin (0.1.0-2) unstable; urgency=low
+
+  * Incremented build-deps to match Xfce 4.4 Beta 2 
+
+ -- Yves-Alexis Perez <corsac@corsac.net>  Wed, 12 Jul 2006 13:21:22 +0200
+
+thunar-media-tags-plugin (0.1.0-1) unstable; urgency=low
+
+  * Initial release Closes: #367631
+
+ -- Yves-Alexis Perez <corsac@corsac.net>  Sat, 17 Jun 2006 14:14:02 +0100
